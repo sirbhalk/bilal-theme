@@ -1,20 +1,16 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
       "type": "glomarrt-hero",
-      "settings": {
-        "color_scheme": "scheme-3",
-        "eyebrow": "متجر واحد، كل ما تحتاجه",
-        "heading": "تسوّق الآن بأفضل العروض والمنتجات المميزة",
-        "text": "<p>اكتشف مجموعة واسعة من المنتجات العصرية بجودة عالية وأسعار مناسبة. اطلب اليوم وخلّص ملي توصلك السلعة.</p>",
-        "image": "shopify://shop_images/Gemini_Generated_Image_14bgfl14bgfl14bg_PicCopilot_c909d.png",
-        "button_label_1": "تسوّق الآن",
-        "button_link_1": "shopify://collections/all-product",
-        "button_label_2": "شوف العروض",
-        "button_link_2": "shopify://collections/all",
-        "padding_top": 28,
-        "padding_bottom": 0
-      },
       "blocks": {
         "p1": {
           "type": "promo",
@@ -40,15 +36,23 @@
       "block_order": [
         "p1",
         "p2"
-      ]
+      ],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "eyebrow": "متجر واحد، كل ما تحتاجه",
+        "heading": "تسوّق الآن بأفضل العروض والمنتجات المميزة",
+        "text": "<p>اكتشف مجموعة واسعة من المنتجات العصرية بجودة عالية وأسعار مناسبة. اطلب اليوم وخلّص ملي توصلك السلعة.</p>",
+        "image": "shopify://shop_images/Gemini_Generated_Image_14bgfl14bgfl14bg_PicCopilot_c909d.png",
+        "button_label_1": "تسوّق الآن",
+        "button_link_1": "shopify://collections/all-product",
+        "button_label_2": "شوف العروض",
+        "button_link_2": "shopify://collections/all",
+        "padding_top": 28,
+        "padding_bottom": 0
+      }
     },
     "trust": {
       "type": "glomarrt-trust-bar",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "padding_top": 28,
-        "padding_bottom": 0
-      },
       "blocks": {
         "a": {
           "type": "item",
@@ -88,41 +92,42 @@
         "b",
         "c",
         "d"
-      ]
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "padding_top": 28,
+        "padding_bottom": 0
+      }
     },
     "cats": {
       "type": "glomarrt-categories",
-      "settings": {
-        "heading": "تسوّق حسب القسم",
-        "link_label": "جميع الأقسام",
-        "link": "/collections",
-        "color_scheme": "scheme-1",
-        "padding_top": 56,
-        "padding_bottom": 0
-      },
       "blocks": {
         "c1": {
           "type": "category",
           "settings": {
-            "collection": "all-product"
+            "collection": "all-product",
+            "title": ""
           }
         },
         "c2": {
           "type": "category",
           "settings": {
-            "collection": "snadel"
+            "collection": "snadel",
+            "title": ""
           }
         },
         "c3": {
           "type": "category",
           "settings": {
-            "collection": "shoes"
+            "collection": "shoes",
+            "title": ""
           }
         },
         "c4": {
           "type": "category",
           "settings": {
-            "collection": "all-furniture"
+            "collection": "all-furniture",
+            "title": ""
           }
         }
       },
@@ -131,18 +136,26 @@
         "c2",
         "c3",
         "c4"
-      ]
+      ],
+      "settings": {
+        "heading": "تسوّق حسب القسم",
+        "link_label": "جميع الأقسام",
+        "link": "/collections",
+        "color_scheme": "scheme-1",
+        "padding_top": 56,
+        "padding_bottom": 0
+      }
     },
     "best": {
       "type": "featured-collection",
       "settings": {
+        "collection": "snadel",
+        "products_to_show": 8,
         "title": "اختياراتنا لك",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "snadel",
-        "products_to_show": 8,
         "columns_desktop": 4,
         "enable_desktop_slider": false,
         "full_width": false,
@@ -160,133 +173,9 @@
         "padding_top": 48,
         "padding_bottom": 0
       }
-    },
-    "offer": {
-      "type": "glomarrt-offer-banner",
-      "settings": {
-        "color_scheme": "scheme-6",
-        "eyebrow": "عروض لفترة محدودة",
-        "heading": "عروض حصرية وتوصيل سريع",
-        "text": "<p>الكمية محدودة. اطلب دابا والدفع عند الاستلام.</p>",
-        "button_label": "استفد من العرض",
-        "button_link": "shopify://collections/all-product",
-        "padding_top": 56,
-        "padding_bottom": 0
-      }
-    },
-    "featured": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "منتجات مميزة",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all-furniture",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "link",
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": true,
-        "quick_add": "standard",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 48,
-        "padding_bottom": 0
-      }
-    },
-    "new": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "منتجات جديدة",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "shoes",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "link",
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": true,
-        "quick_add": "standard",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 48,
-        "padding_bottom": 0
-      }
-    },
-    "faq": {
-      "type": "glomarrt-faq",
-      "settings": {
-        "heading": "الأسئلة الشائعة",
-        "color_scheme": "scheme-1",
-        "add_schema": true,
-        "padding_top": 64,
-        "padding_bottom": 24
-      },
-      "blocks": {
-        "q0": {
-          "type": "question",
-          "settings": {
-            "question": "كيفاش كتوصل الطلبات؟",
-            "answer": "<p>كنوفروا خدمة توصيل سريعة وموثوقة لجميع المدن. بعد تأكيد الطلب، كيتجهز ويتم شحنه في أقرب وقت ممكن. مدة التوصيل كتكون غالباً ما بين 24 و72 ساعة حسب المدينة وظروف شركة الشحن.</p>"
-          }
-        },
-        "q1": {
-          "type": "question",
-          "settings": {
-            "question": "واش المنتجات ديالكم أصلية وذات جودة؟",
-            "answer": "<p>نعم، جميع المنتجات اللي فالمتجر مختارة بعناية باش تجمع بين الجودة والسعر المناسب. كنركزوا على منتجات عملية وكتعطي قيمة حقيقية للزبون.</p>"
-          }
-        },
-        "q2": {
-          "type": "question",
-          "settings": {
-            "question": "واش يمكن إرجاع أو تبديل المنتج؟",
-            "answer": "<p>نعم، يمكن للزبون يرجع أو يبدل المنتج خلال مدة محددة (عادة 7 أيام من الاستلام)، بشرط يكون المنتج في حالته الأصلية، ما يكونش مستعمل، ويكون مع التغليف الأصلي. هدفنا هو رضا الزبون أولاً.</p>"
-          }
-        },
-        "q3": {
-          "type": "question",
-          "settings": {
-            "question": "شحال كتاخذ معالجة الطلب؟",
-            "answer": "<p>من بعد ما كيتأكد الطلب، كنقوموا بتجهيزه في ظرف 12 إلى 24 ساعة، ومن بعد كيتسلم لشركة الشحن باش يبدا التوصيل.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "q0",
-        "q1",
-        "q2",
-        "q3"
-      ]
     },
     "steps": {
       "type": "glomarrt-steps",
-      "settings": {
-        "heading": "كيفاش تطلب؟",
-        "subheading": "ساهلة، وما كتخلّص حتى توصلك السلعة",
-        "button_label": "ابدأ التسوق",
-        "button_link": "shopify://collections/all-product",
-        "color_scheme": "scheme-1",
-        "padding_top": 56,
-        "padding_bottom": 0
-      },
       "blocks": {
         "s1": {
           "type": "step",
@@ -326,10 +215,152 @@
         "s2",
         "s3",
         "s4"
-      ]
+      ],
+      "settings": {
+        "heading": "كيفاش تطلب؟",
+        "subheading": "ساهلة، وما كتخلّص حتى توصلك السلعة",
+        "button_label": "ابدأ التسوق",
+        "button_link": "shopify://collections/all-product",
+        "color_scheme": "scheme-1",
+        "padding_top": 56,
+        "padding_bottom": 0
+      }
+    },
+    "offer": {
+      "type": "glomarrt-offer-banner",
+      "settings": {
+        "color_scheme": "scheme-6",
+        "eyebrow": "عروض لفترة محدودة",
+        "heading": "عروض حصرية وتوصيل سريع",
+        "text": "<p>الكمية محدودة. اطلب دابا والدفع عند الاستلام.</p>",
+        "button_label": "استفد من العرض",
+        "button_link": "shopify://collections/all-product",
+        "padding_top": 56,
+        "padding_bottom": 0
+      }
+    },
+    "featured": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all-furniture",
+        "products_to_show": 8,
+        "title": "منتجات مميزة",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
+    },
+    "new": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "shoes",
+        "products_to_show": 8,
+        "title": "منتجات جديدة",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
     },
     "reviews": {
       "type": "glomarrt-reviews",
+      "blocks": {
+        "review_iAzM8a": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "الثمن مناسب",
+            "text": "<p><br/>الثمن مناسب<br/><br/></p>",
+            "name": "imran",
+            "city": "أكادير",
+            "product": ""
+          }
+        },
+        "review_h4TmRz": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "",
+            "text": "<p><br/>وصلني المنتوج فحالة مزيانة، الجودة واعرة والثمن مناسب بزاف. إن شاء الله نعاود نطلب مرة أخرى.<br/><br/></p>",
+            "name": "Chaimae",
+            "city": "فاس",
+            "product": ""
+          }
+        },
+        "review_iR4WQb": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "كننصح بيه",
+            "text": "<p><br/>كلشي مضبوط، والسيرفيس ديال الزبناء جاوبوني بالزربة<br/><br/></p>",
+            "name": "Wiam",
+            "city": "مراكش",
+            "product": ""
+          }
+        },
+        "review_dhVhfY": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "الجودة مزيانة",
+            "text": "<p><br/>الجودة مزيانة والتغليف نقي<br/><br/></p>",
+            "name": "Salma",
+            "city": "الرباط",
+            "product": ""
+          }
+        },
+        "review_i3Mywj": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "عجبني بزاف",
+            "text": "<p><br/>المنتوج بحال اللي فالتصاور، والتوصيل كان سريع<br/><br/></p>",
+            "name": "Ahmed",
+            "city": "الدار البيضاء",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "review_iAzM8a",
+        "review_h4TmRz",
+        "review_iR4WQb",
+        "review_dhVhfY",
+        "review_i3Mywj"
+      ],
       "settings": {
         "heading": "آراء زبنائنا",
         "subheading": "شنو قالو الناس اللي شراو من عندنا",
@@ -337,9 +368,53 @@
         "color_scheme": "scheme-2",
         "padding_top": 56,
         "padding_bottom": 56
+      }
+    },
+    "faq": {
+      "type": "glomarrt-faq",
+      "blocks": {
+        "q0": {
+          "type": "question",
+          "settings": {
+            "question": "كيفاش كتوصل الطلبات؟",
+            "answer": "<p>كنوفروا خدمة توصيل سريعة وموثوقة لجميع المدن. بعد تأكيد الطلب، كيتجهز ويتم شحنه في أقرب وقت ممكن. مدة التوصيل كتكون غالباً ما بين 24 و72 ساعة حسب المدينة وظروف شركة الشحن.</p>"
+          }
+        },
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "واش المنتجات ديالكم أصلية وذات جودة؟",
+            "answer": "<p>نعم، جميع المنتجات اللي فالمتجر مختارة بعناية باش تجمع بين الجودة والسعر المناسب. كنركزوا على منتجات عملية وكتعطي قيمة حقيقية للزبون.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "واش يمكن إرجاع أو تبديل المنتج؟",
+            "answer": "<p>نعم، يمكن للزبون يرجع أو يبدل المنتج خلال مدة محددة (عادة 7 أيام من الاستلام)، بشرط يكون المنتج في حالته الأصلية، ما يكونش مستعمل، ويكون مع التغليف الأصلي. هدفنا هو رضا الزبون أولاً.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "شحال كتاخذ معالجة الطلب؟",
+            "answer": "<p>من بعد ما كيتأكد الطلب، كنقوموا بتجهيزه في ظرف 12 إلى 24 ساعة، ومن بعد كيتسلم لشركة الشحن باش يبدا التوصيل.</p>"
+          }
+        }
       },
-      "blocks": {},
-      "block_order": []
+      "block_order": [
+        "q0",
+        "q1",
+        "q2",
+        "q3"
+      ],
+      "settings": {
+        "heading": "الأسئلة الشائعة",
+        "color_scheme": "scheme-1",
+        "add_schema": true,
+        "padding_top": 64,
+        "padding_bottom": 24
+      }
     }
   },
   "order": [

@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -23,7 +32,8 @@
           }
         },
         "content": {
-          "type": "content"
+          "type": "content",
+          "settings": {}
         }
       },
       "block_order": [
@@ -31,18 +41,19 @@
         "title",
         "share",
         "content"
-      ]
+      ],
+      "settings": {}
     },
     "also": {
       "type": "featured-collection",
       "settings": {
+        "collection": "all-product",
+        "products_to_show": 4,
         "title": "منتجات قد تعجبك",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all-product",
-        "products_to_show": 4,
         "columns_desktop": 4,
         "enable_desktop_slider": false,
         "full_width": false,
