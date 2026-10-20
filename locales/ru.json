@@ -571,6 +571,8 @@
     "reviews_count": {
       "one": "{{ count }} review",
       "other": "{{ count }} reviews"
-    }
+    },
+    "you_save_html": "You save {{ amount }} ({{ percent }}%)",
+    "today": "Today"
   }
 }

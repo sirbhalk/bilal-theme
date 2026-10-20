@@ -1093,3 +1093,115 @@ body.glomarrt-sticky-buy-open .glomarrt-whatsapp { bottom: 9rem; }
 }
 
 .glomarrt-thanks__wa { display: inline-flex; align-items: center; gap: 0.8rem; }
+
+/* ---------- Product page: blocks above the buy button ---------- */
+.glomarrt-save:empty { display: none; }
+.glomarrt-save { margin: -0.4rem 0 1.2rem; }
+
+.glomarrt-save__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(var(--glomarrt-brand), 0.1);
+  color: rgb(var(--glomarrt-brand-dark));
+  border-radius: 0.8rem;
+  padding: 0.5rem 1.2rem;
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+
+.glomarrt-delivery {
+  border: 0.1rem solid rgba(var(--glomarrt-brand), 0.2);
+  border-radius: var(--glomarrt-radius-md);
+  padding: 1.6rem 1.2rem 1.2rem;
+  margin: 1.2rem 0;
+}
+
+.glomarrt-delivery__steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+  position: relative;
+}
+
+.glomarrt-delivery__steps::before {
+  content: '';
+  position: absolute;
+  top: 2rem;
+  inset-inline: 16.66%;
+  height: 0.2rem;
+  background: rgba(var(--glomarrt-brand), 0.25);
+}
+
+.glomarrt-delivery__step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.4rem;
+}
+
+.glomarrt-delivery__icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: rgb(var(--glomarrt-brand));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 0.4rem rgb(var(--color-background));
+}
+
+.glomarrt-delivery__label { font-size: 1.3rem; font-weight: 700; line-height: 1.3; }
+.glomarrt-delivery__date { font-size: 1.2rem; color: rgb(var(--glomarrt-brand)); font-weight: 700; min-height: 1.6rem; }
+
+.glomarrt-delivery__note {
+  margin: 1.2rem 0 0;
+  text-align: center;
+  font-size: 1.3rem;
+  color: rgba(var(--color-foreground), 0.7);
+}
+
+.glomarrt-mini-steps {
+  background: rgba(var(--glomarrt-brand), 0.05);
+  border-radius: var(--glomarrt-radius-md);
+  padding: 1.4rem 1.6rem;
+  margin: 1.2rem 0;
+}
+
+.glomarrt-mini-steps__heading { margin: 0 0 0.8rem; font-weight: 800; font-size: 1.5rem; }
+
+.glomarrt-mini-steps__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: gstep;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.glomarrt-mini-steps__list li {
+  counter-increment: gstep;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+}
+
+.glomarrt-mini-steps__list li::before {
+  content: counter(gstep);
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background: rgb(var(--glomarrt-brand));
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}

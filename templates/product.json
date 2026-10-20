@@ -90,17 +90,58 @@
           "settings": {
             "share_label": "شارك"
           }
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {}
+        },
+        "savings": {
+          "type": "glomarrt_savings",
+          "settings": {}
+        },
+        "delivery": {
+          "type": "glomarrt_delivery",
+          "settings": {
+            "min_days": 1,
+            "max_days": 3,
+            "label_order": "تطلب اليوم",
+            "label_ship": "كنشحنو الطلب",
+            "label_deliver": "كتوصلك وكتخلّص",
+            "note": "التوصيل لجميع مدن المغرب، والدفع عند الاستلام"
+          }
+        },
+        "mini_steps": {
+          "type": "glomarrt_mini_steps",
+          "settings": {
+            "heading": "كيفاش تطلب؟",
+            "step_1": "عمّر الفورم بالاسم والهاتف والمدينة",
+            "step_2": "كنتاصلو بيك باش نأكدو الطلب",
+            "step_3": "خلّص ملي توصلك السلعة"
+          }
+        },
+        "wa_order": {
+          "type": "glomarrt_whatsapp_order",
+          "settings": {
+            "label": "اطلب عبر واتساب",
+            "message": "السلام عليكم، بغيت نطلب:",
+            "note": "كنجاوبوك بسرعة على واتساب"
+          }
         }
       },
       "block_order": [
         "title",
+        "rating",
         "price",
+        "savings",
         "variant_picker",
         "quantity_selector",
+        "trust",
+        "delivery",
+        "mini_steps",
         "releasit_cod",
         "webi_leadform_leadform_Pe9RPt",
         "buy_buttons",
-        "trust",
+        "wa_order",
         "description",
         "shipping",
         "guarantee",
@@ -146,15 +187,84 @@
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
-        "show_rating": false,
+        "show_rating": true,
         "padding_top": 48,
         "padding_bottom": 48
+      }
+    },
+    "reviews": {
+      "type": "glomarrt-reviews",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "heading": "آراء الزبناء",
+        "subheading": "شنو قالو الناس اللي شراو من عندنا",
+        "show_average": true,
+        "color_scheme": "scheme-2",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "faq": {
+      "type": "glomarrt-faq",
+      "settings": {
+        "heading": "عندك سؤال؟",
+        "color_scheme": "scheme-1",
+        "add_schema": false,
+        "padding_top": 48,
+        "padding_bottom": 0
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "كيفاش نطلب هاد المنتج؟",
+            "answer": "<p>عمّر الفورم بالاسم ورقم الهاتف والمدينة، ومن بعد كنتاصلو بيك باش نأكدو الطلب. ولا طلب مباشرة عبر واتساب.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "شحال كياخد التوصيل؟",
+            "answer": "<p>كنجهزو الطلب في ظرف 12 إلى 24 ساعة، والتوصيل كياخد غالباً ما بين 24 و72 ساعة حسب المدينة.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "واش نخلّص قبل ما توصلني السلعة؟",
+            "answer": "<p>لا، الدفع عند الاستلام. كتخلّص غير ملي توصلك الطلبية.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "واش يمكن نرجع ولا نبدل المنتج؟",
+            "answer": "<p>نعم، خلال 7 أيام من الاستلام، بشرط يكون المنتج في حالته الأصلية، ما يكونش مستعمل، ومع التغليف الأصلي.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "sticky": {
+      "type": "glomarrt-sticky-buy",
+      "settings": {
+        "button_label": "اطلب الآن",
+        "show_on_desktop": false
       }
     }
   },
   "order": [
     "main",
     "disclosures",
-    "related-products"
+    "reviews",
+    "faq",
+    "related-products",
+    "sticky"
   ]
 }

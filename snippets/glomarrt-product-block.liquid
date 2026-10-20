@@ -1,0 +1,96 @@
+{% comment %}
+  Glomarrt product page blocks (rendered from main-product).
+  Accepts: block, product, section_id
+{% endcomment %}
+{%- case block.type -%}
+  {%- when 'glomarrt_savings' -%}
+    {%- liquid
+      assign v = product.selected_or_first_available_variant
+      assign saving = 0
+      if v.compare_at_price > v.price
+        assign saving = v.compare_at_price | minus: v.price
+        assign saving_pct = saving | times: 100.0 | divided_by: v.compare_at_price | round
+        assign saving_money = saving | money_without_trailing_zeros
+      endif
+    -%}
+    <div id="GlomarrtSave-{{ section_id }}" class="glomarrt-save" {{ block.shopify_attributes }}>
+      {%- if saving > 0 -%}
+        <span class="glomarrt-save__badge">
+          {{- 'glomarrt.you_save_html' | t: amount: saving_money, percent: saving_pct -}}
+        </span>
+      {%- endif -%}
+    </div>
+    <script>
+      (() => {
+        const id = 'GlomarrtSave-{{ section_id }}';
+        const hook = () =>
+          typeof subscribe === 'function' &&
+          subscribe(PUB_SUB_EVENTS.variantChange, ({ data }) => {
+            const fresh = data.html && data.html.getElementById(id);
+            const current = document.getElementById(id);
+            if (fresh && current) current.innerHTML = fresh.innerHTML;
+          });
+        if (typeof subscribe === 'function') hook();
+        else document.addEventListener('DOMContentLoaded', hook);
+      })();
+    </script>
+
+  {%- when 'glomarrt_delivery' -%}
+    <div class="glomarrt-delivery" data-min="{{ block.settings.min_days }}" data-max="{{ block.settings.max_days }}" {{ block.shopify_attributes }}>
+      <ol class="glomarrt-delivery__steps list-unstyled" role="list">
+        <li class="glomarrt-delivery__step">
+          <span class="glomarrt-delivery__icon">{% render 'glomarrt-icon', name: 'check', px: 20 %}</span>
+          <span class="glomarrt-delivery__label">{{ block.settings.label_order }}</span>
+          <span class="glomarrt-delivery__date" data-offset="0">{{ 'glomarrt.today' | t }}</span>
+        </li>
+        <li class="glomarrt-delivery__step">
+          <span class="glomarrt-delivery__icon">{% render 'glomarrt-icon', name: 'truck', px: 20 %}</span>
+          <span class="glomarrt-delivery__label">{{ block.settings.label_ship }}</span>
+          <span class="glomarrt-delivery__date" data-offset="1"></span>
+        </li>
+        <li class="glomarrt-delivery__step">
+          <span class="glomarrt-delivery__icon">{% render 'glomarrt-icon', name: 'cash', px: 20 %}</span>
+          <span class="glomarrt-delivery__label">{{ block.settings.label_deliver }}</span>
+          <span class="glomarrt-delivery__date" data-range="true"></span>
+        </li>
+      </ol>
+      {%- if block.settings.note != blank -%}
+        <p class="glomarrt-delivery__note">{{ block.settings.note }}</p>
+      {%- endif -%}
+    </div>
+    <script>
+      (() => {
+        const box = document.currentScript.previousElementSibling;
+        if (!box || !box.classList.contains('glomarrt-delivery')) return;
+        const lang = document.documentElement.lang || 'ar';
+        const fmt = new Intl.DateTimeFormat(lang, { weekday: 'short', day: 'numeric', month: 'short' });
+        const fmtShort = new Intl.DateTimeFormat(lang, { day: 'numeric', month: 'short' });
+        const addDays = (n) => {
+          const d = new Date();
+          d.setDate(d.getDate() + n);
+          if (d.getDay() === 0) d.setDate(d.getDate() + 1); // no delivery on Sunday
+          return d;
+        };
+        const min = parseInt(box.dataset.min, 10) || 1;
+        const max = parseInt(box.dataset.max, 10) || 3;
+        box.querySelectorAll('[data-offset]').forEach((el) => {
+          const n = parseInt(el.dataset.offset, 10);
+          if (n > 0) el.textContent = fmt.format(addDays(n));
+        });
+        const range = box.querySelector('[data-range]');
+        if (range) range.textContent = fmtShort.format(addDays(min)) + ' – ' + fmtShort.format(addDays(max));
+      })();
+    </script>
+
+  {%- when 'glomarrt_mini_steps' -%}
+    <div class="glomarrt-mini-steps" {{ block.shopify_attributes }}>
+      {%- if block.settings.heading != blank -%}
+        <p class="glomarrt-mini-steps__heading">{{ block.settings.heading }}</p>
+      {%- endif -%}
+      <ol class="glomarrt-mini-steps__list" role="list">
+        {%- if block.settings.step_1 != blank -%}<li>{{ block.settings.step_1 }}</li>{%- endif -%}
+        {%- if block.settings.step_2 != blank -%}<li>{{ block.settings.step_2 }}</li>{%- endif -%}
+        {%- if block.settings.step_3 != blank -%}<li>{{ block.settings.step_3 }}</li>{%- endif -%}
+      </ol>
+    </div>
+{%- endcase -%}

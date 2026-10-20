@@ -599,6 +599,8 @@
       "few": "{{ count }} آراء",
       "many": "{{ count }} رأياً",
       "other": "{{ count }} رأي"
-    }
+    },
+    "you_save_html": "وفّر {{ amount }} ({{ percent }}٪)",
+    "today": "اليوم"
   }
 }

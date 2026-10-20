@@ -559,6 +559,8 @@
     "reviews_count": {
       "one": "{{ count }} avis",
       "other": "{{ count }} avis"
-    }
+    },
+    "you_save_html": "Économisez {{ amount }} ({{ percent }} %)",
+    "today": "Aujourd’hui"
   }
 }
