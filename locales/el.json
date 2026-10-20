@@ -534,6 +534,10 @@
     "category": "Category",
     "home": "Home",
     "all_collections": "All collections",
-    "breadcrumbs": "Breadcrumbs"
+    "breadcrumbs": "Breadcrumbs",
+    "reviews_count": {
+      "one": "{{ count }} review",
+      "other": "{{ count }} reviews"
+    }
   }
 }

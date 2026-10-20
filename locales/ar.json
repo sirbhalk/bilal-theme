@@ -582,6 +582,14 @@
     "category": "قسم",
     "home": "الرئيسية",
     "all_collections": "جميع الأقسام",
-    "breadcrumbs": "مسار الصفحة"
+    "breadcrumbs": "مسار الصفحة",
+    "reviews_count": {
+      "zero": "لا توجد آراء",
+      "one": "رأي واحد",
+      "two": "رأيان",
+      "few": "{{ count }} آراء",
+      "many": "{{ count }} رأياً",
+      "other": "{{ count }} رأي"
+    }
   }
 }

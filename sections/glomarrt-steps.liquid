@@ -1,0 +1,151 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="glomarrt-heading glomarrt-steps__heading h2">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    {%- if section.settings.subheading != blank -%}
+      <p class="glomarrt-steps__sub">{{ section.settings.subheading }}</p>
+    {%- endif -%}
+    <ol class="glomarrt-steps list-unstyled" role="list">
+      {%- for block in section.blocks -%}
+        <li class="glomarrt-step" {{ block.shopify_attributes }}>
+          <span class="glomarrt-step__num" aria-hidden="true">{{ forloop.index }}</span>
+          <span class="glomarrt-step__icon">{% render 'glomarrt-icon', name: block.settings.icon, px: 28 %}</span>
+          <h3 class="glomarrt-step__title">{{ block.settings.title }}</h3>
+          {%- if block.settings.text != blank -%}
+            <p class="glomarrt-step__text">{{ block.settings.text }}</p>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ol>
+    {%- if section.settings.button_label != blank -%}
+      <div class="glomarrt-steps__cta">
+        <a
+          {% if section.settings.button_link != blank %}
+            href="{{ section.settings.button_link }}"
+          {% else %}
+            role="link" aria-disabled="true"
+          {% endif %}
+          class="button"
+        >
+          {{- section.settings.button_label -}}
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Glomarrt: how to order",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "كيفاش تطلب؟"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "ساهلة، وما كتخلّص حتى توصلك السلعة"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "ابدأ التسوق"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "search", "label": "Choose" },
+            { "value": "whatsapp", "label": "Phone / WhatsApp" },
+            { "value": "truck", "label": "Delivery" },
+            { "value": "cash", "label": "Pay on delivery" },
+            { "value": "check", "label": "Check" }
+          ],
+          "default": "check"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "اختار المنتج"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Glomarrt: how to order",
+      "blocks": [
+        { "type": "step", "settings": { "icon": "search", "title": "اختار المنتج", "text": "عمّر الفورم بالاسم والهاتف والمدينة" } },
+        { "type": "step", "settings": { "icon": "whatsapp", "title": "كنتاصلو بيك", "text": "باش نأكدو معاك الطلب" } },
+        { "type": "step", "settings": { "icon": "cash", "title": "خلّص ملي توصلك", "text": "الدفع عند الاستلام" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

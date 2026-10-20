@@ -491,6 +491,8 @@
                     block: block,
                     product_form_id: product_form_id
                   %}
+                {%- when 'glomarrt_whatsapp_order' -%}
+                  {%- render 'glomarrt-whatsapp-order', block: block, product: product -%}
                 {%- when 'buy_buttons' -%}
                   {%- render 'buy-buttons',
                     block: block,
@@ -940,6 +942,35 @@
           "default": true,
           "label": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.label",
           "info": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.info"
+        }
+      ]
+    },
+    {
+      "type": "glomarrt_whatsapp_order",
+      "name": "Glomarrt: order on WhatsApp",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Uses the WhatsApp number from Theme settings › Glomarrt."
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Button label",
+          "default": "اطلب عبر واتساب"
+        },
+        {
+          "type": "text",
+          "id": "message",
+          "label": "Message start",
+          "default": "السلام عليكم، بغيت نطلب:"
+        },
+        {
+          "type": "text",
+          "id": "note",
+          "label": "Small note under the button",
+          "default": "كنجاوبوك بسرعة على واتساب"
         }
       ]
     },

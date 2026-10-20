@@ -546,6 +546,10 @@
     "category": "Catégorie",
     "home": "Accueil",
     "all_collections": "Toutes les catégories",
-    "breadcrumbs": "Fil d’Ariane"
+    "breadcrumbs": "Fil d’Ariane",
+    "reviews_count": {
+      "one": "{{ count }} avis",
+      "other": "{{ count }} avis"
+    }
   }
 }

@@ -1,0 +1,31 @@
+{% comment %}
+  "Order on WhatsApp" button for the product page.
+  Accepts: block, product
+{% endcomment %}
+{%- liquid
+  assign wa_number = settings.whatsapp_number | remove: '+' | remove: ' ' | remove: '-' | remove: '(' | remove: ')'
+  assign variant = product.selected_or_first_available_variant
+  assign wa_text = block.settings.message | append: ' ' | append: product.title
+  unless product.has_only_default_variant
+    assign wa_text = wa_text | append: ' (' | append: variant.title | append: ')'
+  endunless
+  assign wa_text = wa_text | append: ' — ' | append: shop.url | append: product.url
+-%}
+{%- if wa_number != blank -%}
+  <div class="glomarrt-wa-order" {{ block.shopify_attributes }}>
+    <a
+      class="glomarrt-wa-order__button"
+      href="https://wa.me/{{ wa_number }}?text={{ wa_text | url_encode }}"
+      target="_blank"
+      rel="noopener"
+    >
+      {%- render 'glomarrt-icon', name: 'whatsapp', px: 22 -%}
+      <span>{{ block.settings.label }}</span>
+    </a>
+    {%- if block.settings.note != blank -%}
+      <p class="glomarrt-wa-order__note">{{ block.settings.note }}</p>
+    {%- endif -%}
+  </div>
+{%- elsif request.design_mode -%}
+  <p class="glomarrt-editor-hint" {{ block.shopify_attributes }}>Add your WhatsApp number in Theme settings › Glomarrt to show this button.</p>
+{%- endif -%}

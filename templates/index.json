@@ -153,7 +153,7 @@
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
-        "show_rating": false,
+        "show_rating": true,
         "quick_add": "standard",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
@@ -194,7 +194,7 @@
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
-        "show_rating": false,
+        "show_rating": true,
         "quick_add": "standard",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
@@ -222,7 +222,7 @@
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
-        "show_rating": false,
+        "show_rating": true,
         "quick_add": "standard",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
@@ -275,6 +275,71 @@
         "q2",
         "q3"
       ]
+    },
+    "steps": {
+      "type": "glomarrt-steps",
+      "settings": {
+        "heading": "كيفاش تطلب؟",
+        "subheading": "ساهلة، وما كتخلّص حتى توصلك السلعة",
+        "button_label": "ابدأ التسوق",
+        "button_link": "shopify://collections/all-product",
+        "color_scheme": "scheme-1",
+        "padding_top": 56,
+        "padding_bottom": 0
+      },
+      "blocks": {
+        "s1": {
+          "type": "step",
+          "settings": {
+            "icon": "search",
+            "title": "اختار المنتج",
+            "text": "عمّر الفورم بالاسم والهاتف والمدينة"
+          }
+        },
+        "s2": {
+          "type": "step",
+          "settings": {
+            "icon": "whatsapp",
+            "title": "كنتاصلو بيك",
+            "text": "باش نأكدو معاك الطلب قبل الشحن"
+          }
+        },
+        "s3": {
+          "type": "step",
+          "settings": {
+            "icon": "truck",
+            "title": "كنوصلو ليك",
+            "text": "خلال 24 حتى 72 ساعة حسب المدينة"
+          }
+        },
+        "s4": {
+          "type": "step",
+          "settings": {
+            "icon": "cash",
+            "title": "خلّص ملي توصلك",
+            "text": "الدفع عند الاستلام، بلا مخاطرة"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "reviews": {
+      "type": "glomarrt-reviews",
+      "settings": {
+        "heading": "آراء زبنائنا",
+        "subheading": "شنو قالو الناس اللي شراو من عندنا",
+        "show_average": true,
+        "color_scheme": "scheme-2",
+        "padding_top": 56,
+        "padding_bottom": 56
+      },
+      "blocks": {},
+      "block_order": []
     }
   },
   "order": [
@@ -282,9 +347,11 @@
     "trust",
     "cats",
     "best",
+    "steps",
     "offer",
     "featured",
     "new",
+    "reviews",
     "faq"
   ]
 }

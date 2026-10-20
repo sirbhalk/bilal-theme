@@ -1,0 +1,93 @@
+{%- comment -%}
+  Glomarrt: sticky buy bar on phones (product page).
+  Appears once the customer scrolls past the order buttons; tapping it scrolls back
+  to the order form (the COD app button if present, otherwise the add to cart button).
+{%- endcomment -%}
+{%- if product -%}
+  {%- assign sticky_variant = product.selected_or_first_available_variant -%}
+  <glomarrt-sticky-buy class="glomarrt-sticky-buy{% if section.settings.show_on_desktop %} glomarrt-sticky-buy--desktop{% endif %}" aria-hidden="true">
+    <div class="glomarrt-sticky-buy__inner page-width">
+      {%- if product.featured_image -%}
+        <span class="glomarrt-sticky-buy__thumb">
+          {{ product.featured_image | image_url: width: 120 | image_tag: loading: 'lazy', alt: '', class: 'glomarrt-cover' }}
+        </span>
+      {%- endif -%}
+      <span class="glomarrt-sticky-buy__info">
+        <span class="glomarrt-sticky-buy__title">{{ product.title }}</span>
+        <span class="glomarrt-sticky-buy__price">
+          {{- sticky_variant.price | money -}}
+          {%- if sticky_variant.compare_at_price > sticky_variant.price -%}
+            <s>{{ sticky_variant.compare_at_price | money }}</s>
+          {%- endif -%}
+        </span>
+      </span>
+      <button type="button" class="button glomarrt-sticky-buy__button" tabindex="-1"{% unless sticky_variant.available %} disabled{% endunless %}>
+        {%- if sticky_variant.available -%}
+          {{ section.settings.button_label }}
+        {%- else -%}
+          {{ 'products.product.sold_out' | t }}
+        {%- endif -%}
+      </button>
+    </div>
+  </glomarrt-sticky-buy>
+
+  <script>
+    if (!customElements.get('glomarrt-sticky-buy')) {
+      customElements.define(
+        'glomarrt-sticky-buy',
+        class GlomarrtStickyBuy extends HTMLElement {
+          connectedCallback() {
+            const info = document.querySelector('.product__info-container');
+            if (!info) return;
+            this.target =
+              info.querySelector('.shopify-app-block') ||
+              info.querySelector('.product-form__buttons') ||
+              info.querySelector('product-form') ||
+              info;
+            this.button = this.querySelector('button');
+            this.button.addEventListener('click', () => {
+              this.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              this.target.classList.add('glomarrt-highlight');
+              setTimeout(() => this.target.classList.remove('glomarrt-highlight'), 1600);
+            });
+            new IntersectionObserver(([entry]) => {
+              const passed = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+              this.classList.toggle('is-visible', passed);
+              document.body.classList.toggle('glomarrt-sticky-buy-open', passed);
+              this.setAttribute('aria-hidden', passed ? 'false' : 'true');
+              this.button.tabIndex = passed ? 0 : -1;
+            }).observe(this.target);
+          }
+        }
+      );
+    }
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Glomarrt: sticky buy bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "اطلب الآن"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_on_desktop",
+      "label": "Also show on desktop",
+      "default": false
+    }
+  ],
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "presets": [
+    {
+      "name": "Glomarrt: sticky buy bar"
+    }
+  ]
+}
+{% endschema %}
