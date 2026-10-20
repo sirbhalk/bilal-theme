@@ -579,6 +579,9 @@
   "glomarrt": {
     "search_placeholder": "قلّب على أي منتج…",
     "whatsapp_label": "تواصل معنا عبر واتساب",
-    "category": "قسم"
+    "category": "قسم",
+    "home": "الرئيسية",
+    "all_collections": "جميع الأقسام",
+    "breadcrumbs": "مسار الصفحة"
   }
 }

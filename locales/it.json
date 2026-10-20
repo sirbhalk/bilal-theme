@@ -543,6 +543,9 @@
   "glomarrt": {
     "search_placeholder": "Search for any product…",
     "whatsapp_label": "Chat with us on WhatsApp",
-    "category": "Category"
+    "category": "Category",
+    "home": "Home",
+    "all_collections": "All collections",
+    "breadcrumbs": "Breadcrumbs"
   }
 }

@@ -1,0 +1,146 @@
+{%- liquid
+  assign banner_title = section.settings.heading
+  assign banner_text = section.settings.text
+  if banner_title == blank
+    case request.page_type
+      when 'collection'
+        assign banner_title = collection.title
+      when 'list-collections'
+        assign banner_title = 'glomarrt.all_collections' | t
+      when 'page'
+        assign banner_title = page.title
+      when 'blog'
+        assign banner_title = blog.title
+      when 'article'
+        assign banner_title = blog.title
+      when 'search'
+        assign banner_title = 'templates.search.title' | t
+      when 'cart'
+        assign banner_title = 'sections.cart.title' | t
+      else
+        assign banner_title = page_title
+    endcase
+  endif
+  if banner_text == blank and section.settings.show_collection_description and request.page_type == 'collection'
+    assign banner_text = collection.description
+  endif
+-%}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="glomarrt-page-banner color-{{ section.settings.color_scheme }} gradient{% if section.settings.hide_theme_title %} glomarrt-page-banner--replaces-title{% endif %}">
+      {%- if section.settings.show_breadcrumbs -%}
+        <nav class="glomarrt-breadcrumbs" aria-label="{{ 'glomarrt.breadcrumbs' | t }}">
+          <a href="{{ routes.root_url }}">{{ 'glomarrt.home' | t }}</a>
+          {%- if request.page_type == 'collection' -%}
+            <span aria-hidden="true">/</span>
+            <a href="{{ routes.collections_url }}">{{ 'glomarrt.all_collections' | t }}</a>
+          {%- elsif request.page_type == 'article' and blog -%}
+            <span aria-hidden="true">/</span>
+            <a href="{{ blog.url }}">{{ blog.title }}</a>
+          {%- endif -%}
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">{{ banner_title }}</span>
+        </nav>
+      {%- endif -%}
+      <h1 class="glomarrt-page-banner__title">{{ banner_title }}</h1>
+      {%- if banner_text != blank -%}
+        <div class="glomarrt-page-banner__text rte">{{ banner_text }}</div>
+      {%- endif -%}
+      {%- if request.page_type == 'collection' and section.settings.show_collection_count -%}
+        <span class="glomarrt-pill">
+          {{- 'templates.search.results_products_with_count' | t: count: collection.all_products_count -}}
+        </span>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Glomarrt: page header",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Title",
+      "info": "Leave empty to use the page, collection or blog name"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_description",
+      "label": "Show collection description",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_count",
+      "label": "Show product count on collections",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_breadcrumbs",
+      "label": "Show breadcrumbs",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_theme_title",
+      "label": "Hide the page's own title (avoid showing it twice)",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-3"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Glomarrt: page header"
+    }
+  ]
+}
+{% endschema %}

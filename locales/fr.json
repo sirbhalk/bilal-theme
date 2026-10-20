@@ -543,6 +543,9 @@
   "glomarrt": {
     "search_placeholder": "Rechercher un produit…",
     "whatsapp_label": "Écrivez-nous sur WhatsApp",
-    "category": "Catégorie"
+    "category": "Catégorie",
+    "home": "Accueil",
+    "all_collections": "Toutes les catégories",
+    "breadcrumbs": "Fil d’Ariane"
   }
 }

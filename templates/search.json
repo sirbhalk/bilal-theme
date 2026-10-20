@@ -1,12 +1,26 @@
 {
   "sections": {
+    "banner": {
+      "type": "glomarrt-page-banner",
+      "settings": {
+        "heading": "",
+        "text": "",
+        "show_collection_description": true,
+        "show_collection_count": true,
+        "show_breadcrumbs": true,
+        "hide_theme_title": true,
+        "color_scheme": "scheme-3",
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    },
     "main": {
       "type": "main-search",
       "settings": {
         "columns_desktop": 4,
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "image_shape": "default",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "enable_filtering": true,
@@ -15,12 +29,62 @@
         "article_show_date": true,
         "article_show_author": false,
         "columns_mobile": "2",
-        "padding_top": 36,
+        "padding_top": 24,
         "padding_bottom": 36
       }
+    },
+    "trust": {
+      "type": "glomarrt-trust-bar",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "padding_top": 56,
+        "padding_bottom": 56
+      },
+      "blocks": {
+        "a": {
+          "type": "item",
+          "settings": {
+            "icon": "cash",
+            "title": "الدفع عند الاستلام",
+            "subtitle": "خلّص ملي توصلك السلعة"
+          }
+        },
+        "b": {
+          "type": "item",
+          "settings": {
+            "icon": "truck",
+            "title": "توصيل سريع",
+            "subtitle": "لجميع المدن المغربية"
+          }
+        },
+        "c": {
+          "type": "item",
+          "settings": {
+            "icon": "whatsapp",
+            "title": "خدمة العملاء",
+            "subtitle": "ديما جاهزين نجاوبوك"
+          }
+        },
+        "d": {
+          "type": "item",
+          "settings": {
+            "icon": "return",
+            "title": "إرجاع سهل",
+            "subtitle": "خلال 7 أيام من الاستلام"
+          }
+        }
+      },
+      "block_order": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
     }
   },
   "order": [
-    "main"
+    "banner",
+    "main",
+    "trust"
   ]
 }

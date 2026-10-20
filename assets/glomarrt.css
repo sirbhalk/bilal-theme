@@ -571,3 +571,160 @@
 .product__info-container .icon-with-text svg {
   color: rgb(var(--glomarrt-brand));
 }
+
+/* ---------- Page header (all inner pages) ---------- */
+.glomarrt-page-banner {
+  border-radius: var(--glomarrt-radius-lg);
+  padding: 2.8rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 750px) {
+  .glomarrt-page-banner { padding: 4rem 4.4rem; }
+}
+
+.glomarrt-page-banner__title {
+  margin: 0;
+  font-size: calc(var(--font-heading-scale) * 2.8rem);
+  line-height: 1.3;
+  font-weight: var(--font-heading-weight);
+  color: rgb(var(--color-foreground));
+}
+
+@media screen and (min-width: 750px) {
+  .glomarrt-page-banner__title { font-size: calc(var(--font-heading-scale) * 4rem); }
+}
+
+.glomarrt-page-banner__text {
+  max-width: 72rem;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: rgba(var(--color-foreground), 0.85);
+}
+
+.glomarrt-page-banner__text > *:first-child { margin-top: 0; }
+.glomarrt-page-banner__text > *:last-child { margin-bottom: 0; }
+
+.glomarrt-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  font-size: 1.3rem;
+  color: rgba(var(--color-foreground), 0.8);
+}
+
+.glomarrt-breadcrumbs a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.glomarrt-breadcrumbs a:hover { text-decoration: underline; }
+.glomarrt-breadcrumbs [aria-current] { color: rgb(var(--color-foreground)); font-weight: 700; }
+
+/* The header already shows the title: hide the duplicate Dawn titles */
+body:has(.glomarrt-page-banner--replaces-title) .main-page-title,
+body:has(.glomarrt-page-banner--replaces-title) .collection-hero,
+body:has(.glomarrt-page-banner--replaces-title) .main-list-collections h1.title,
+body:has(.glomarrt-page-banner--replaces-title) .main-blog h1.title--primary,
+body:has(.glomarrt-page-banner--replaces-title) .template-search__header h1 {
+  display: none;
+}
+
+/* ---------- Dawn pages: shared polish ---------- */
+.title,
+.title--primary,
+.main-page-title,
+.collection-hero__title,
+.cart__empty-text {
+  font-weight: var(--font-heading-weight);
+}
+
+.page-width--narrow .rte,
+.main-page-title + .rte {
+  line-height: 1.8;
+}
+
+/* Filters and sorting */
+.facets__summary,
+.facet-filters__field .select__select,
+.mobile-facets__open {
+  font-weight: 700;
+}
+
+.active-facets__button-inner {
+  border-color: rgba(var(--glomarrt-brand), 0.35);
+  background: rgba(var(--glomarrt-brand), 0.06);
+}
+
+.facets__disclosure[open] .facets__summary,
+.facets__summary:hover {
+  color: rgb(var(--glomarrt-brand));
+}
+
+/* Pagination */
+.pagination__item--current {
+  background: rgb(var(--glomarrt-brand));
+  color: #fff;
+  border-radius: 50%;
+}
+
+.pagination__item--current::after { display: none; }
+
+/* Collection list cards */
+.collection-list .card__heading,
+.main-list-collections .card__heading {
+  font-weight: 800;
+}
+
+/* Cart */
+.cart__checkout-button,
+#CartDrawer-Checkout {
+  background-color: rgb(var(--glomarrt-brand));
+  color: #fff;
+  font-size: 1.7rem;
+  min-height: 5.2rem;
+}
+
+.cart-item__name { font-weight: 700; }
+
+.cart__empty-text { font-size: calc(var(--font-heading-scale) * 3rem); }
+
+.drawer__heading { font-weight: var(--font-heading-weight); }
+
+/* Search page */
+.template-search__search .search__input {
+  border-radius: 10rem;
+}
+
+.template-search__search .field::after,
+.template-search__search .field::before {
+  border-radius: 10rem;
+}
+
+/* Contact form */
+.contact .button { min-width: 20rem; }
+
+@media screen and (max-width: 749px) {
+  .contact .button { width: 100%; }
+}
+
+/* Blog */
+.article-card .card__heading { font-weight: 800; }
+.article-template__title { font-weight: var(--font-heading-weight); }
+
+/* 404 */
+.template-404 .title {
+  font-size: calc(var(--font-heading-scale) * 4rem);
+  margin-top: 0.4rem;
+}
+
+.template-404 > p:first-child {
+  font-size: 6.4rem;
+  font-weight: 800;
+  color: rgb(var(--glomarrt-brand));
+  margin: 0;
+  line-height: 1;
+}
