@@ -1,0 +1,21 @@
+{% comment %}
+  Floating WhatsApp button (Glomarrt). Controlled from Theme settings › Glomarrt.
+{% endcomment %}
+{%- liquid
+  assign wa_number = settings.whatsapp_number | remove: '+' | remove: ' ' | remove: '-' | remove: '(' | remove: ')'
+  assign wa_message = settings.whatsapp_message
+  if template.name == 'product' and product
+    assign wa_message = settings.whatsapp_message | append: ' ' | append: product.title | append: ' ' | append: shop.url | append: product.url
+  endif
+-%}
+{%- if settings.show_whatsapp_button and wa_number != blank -%}
+  <a
+    class="glomarrt-whatsapp"
+    href="https://wa.me/{{ wa_number }}{% if wa_message != blank %}?text={{ wa_message | url_encode }}{% endif %}"
+    target="_blank"
+    rel="noopener"
+    aria-label="{{ 'glomarrt.whatsapp_label' | t }}"
+  >
+    {%- render 'glomarrt-icon', name: 'whatsapp', px: 28 -%}
+  </a>
+{%- endif -%}

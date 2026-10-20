@@ -1,0 +1,290 @@
+{
+  "sections": {
+    "hero": {
+      "type": "glomarrt-hero",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "eyebrow": "متجر واحد، كل ما تحتاجه",
+        "heading": "تسوّق الآن بأفضل العروض والمنتجات المميزة",
+        "text": "<p>اكتشف مجموعة واسعة من المنتجات العصرية بجودة عالية وأسعار مناسبة. اطلب اليوم وخلّص ملي توصلك السلعة.</p>",
+        "image": "shopify://shop_images/Gemini_Generated_Image_14bgfl14bgfl14bg_PicCopilot_c909d.png",
+        "button_label_1": "تسوّق الآن",
+        "button_link_1": "shopify://collections/all-product",
+        "button_label_2": "شوف العروض",
+        "button_link_2": "shopify://collections/all",
+        "padding_top": 28,
+        "padding_bottom": 0
+      },
+      "blocks": {
+        "p1": {
+          "type": "promo",
+          "settings": {
+            "color_scheme": "scheme-5",
+            "eyebrow": "منتجات مميزة",
+            "title": "الدار والأثاث",
+            "link_label": "اكتشف",
+            "link": "shopify://collections/all-furniture"
+          }
+        },
+        "p2": {
+          "type": "promo",
+          "settings": {
+            "color_scheme": "scheme-5",
+            "eyebrow": "وصل جديد",
+            "title": "الأحذية",
+            "link_label": "اكتشف",
+            "link": "shopify://collections/shoes"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2"
+      ]
+    },
+    "trust": {
+      "type": "glomarrt-trust-bar",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "padding_top": 28,
+        "padding_bottom": 0
+      },
+      "blocks": {
+        "a": {
+          "type": "item",
+          "settings": {
+            "icon": "cash",
+            "title": "الدفع عند الاستلام",
+            "subtitle": "خلّص ملي توصلك السلعة"
+          }
+        },
+        "b": {
+          "type": "item",
+          "settings": {
+            "icon": "truck",
+            "title": "توصيل سريع",
+            "subtitle": "لجميع المدن المغربية"
+          }
+        },
+        "c": {
+          "type": "item",
+          "settings": {
+            "icon": "whatsapp",
+            "title": "خدمة العملاء",
+            "subtitle": "ديما جاهزين نجاوبوك"
+          }
+        },
+        "d": {
+          "type": "item",
+          "settings": {
+            "icon": "return",
+            "title": "إرجاع سهل",
+            "subtitle": "خلال 7 أيام من الاستلام"
+          }
+        }
+      },
+      "block_order": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    },
+    "cats": {
+      "type": "glomarrt-categories",
+      "settings": {
+        "heading": "تسوّق حسب القسم",
+        "link_label": "جميع الأقسام",
+        "link": "/collections",
+        "color_scheme": "scheme-1",
+        "padding_top": 56,
+        "padding_bottom": 0
+      },
+      "blocks": {
+        "c1": {
+          "type": "category",
+          "settings": {
+            "collection": "all-product"
+          }
+        },
+        "c2": {
+          "type": "category",
+          "settings": {
+            "collection": "snadel"
+          }
+        },
+        "c3": {
+          "type": "category",
+          "settings": {
+            "collection": "shoes"
+          }
+        },
+        "c4": {
+          "type": "category",
+          "settings": {
+            "collection": "all-furniture"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ]
+    },
+    "best": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "اختياراتنا لك",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "snadel",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
+    },
+    "offer": {
+      "type": "glomarrt-offer-banner",
+      "settings": {
+        "color_scheme": "scheme-6",
+        "eyebrow": "عروض لفترة محدودة",
+        "heading": "عروض حصرية وتوصيل سريع",
+        "text": "<p>الكمية محدودة. اطلب دابا والدفع عند الاستلام.</p>",
+        "button_label": "استفد من العرض",
+        "button_link": "shopify://collections/all-product",
+        "padding_top": 56,
+        "padding_bottom": 0
+      }
+    },
+    "featured": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "منتجات مميزة",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all-furniture",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
+    },
+    "new": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "منتجات جديدة",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "shoes",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
+    },
+    "faq": {
+      "type": "glomarrt-faq",
+      "settings": {
+        "heading": "الأسئلة الشائعة",
+        "color_scheme": "scheme-1",
+        "add_schema": true,
+        "padding_top": 64,
+        "padding_bottom": 24
+      },
+      "blocks": {
+        "q0": {
+          "type": "question",
+          "settings": {
+            "question": "كيفاش كتوصل الطلبات؟",
+            "answer": "<p>كنوفروا خدمة توصيل سريعة وموثوقة لجميع المدن. بعد تأكيد الطلب، كيتجهز ويتم شحنه في أقرب وقت ممكن. مدة التوصيل كتكون غالباً ما بين 24 و72 ساعة حسب المدينة وظروف شركة الشحن.</p>"
+          }
+        },
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "واش المنتجات ديالكم أصلية وذات جودة؟",
+            "answer": "<p>نعم، جميع المنتجات اللي فالمتجر مختارة بعناية باش تجمع بين الجودة والسعر المناسب. كنركزوا على منتجات عملية وكتعطي قيمة حقيقية للزبون.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "واش يمكن إرجاع أو تبديل المنتج؟",
+            "answer": "<p>نعم، يمكن للزبون يرجع أو يبدل المنتج خلال مدة محددة (عادة 7 أيام من الاستلام)، بشرط يكون المنتج في حالته الأصلية، ما يكونش مستعمل، ويكون مع التغليف الأصلي. هدفنا هو رضا الزبون أولاً.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "شحال كتاخذ معالجة الطلب؟",
+            "answer": "<p>من بعد ما كيتأكد الطلب، كنقوموا بتجهيزه في ظرف 12 إلى 24 ساعة، ومن بعد كيتسلم لشركة الشحن باش يبدا التوصيل.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q0",
+        "q1",
+        "q2",
+        "q3"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "trust",
+    "cats",
+    "best",
+    "offer",
+    "featured",
+    "new",
+    "faq"
+  ]
+}

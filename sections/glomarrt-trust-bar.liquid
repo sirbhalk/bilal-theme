@@ -1,0 +1,112 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding">
+  <div class="page-width">
+    <ul class="glomarrt-trust list-unstyled color-{{ section.settings.color_scheme }} gradient" role="list">
+      {%- for block in section.blocks -%}
+        <li class="glomarrt-trust__item" {{ block.shopify_attributes }}>
+          <span class="glomarrt-trust__icon">{% render 'glomarrt-icon', name: block.settings.icon, px: 24 %}</span>
+          <span class="glomarrt-trust__text">
+            <span class="glomarrt-trust__title">{{ block.settings.title }}</span>
+            {%- if block.settings.subtitle != blank -%}
+              <span class="glomarrt-trust__subtitle">{{ block.settings.subtitle }}</span>
+            {%- endif -%}
+          </span>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Glomarrt: trust bar",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 6,
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-2"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "cash", "label": "Cash on delivery" },
+            { "value": "truck", "label": "Delivery" },
+            { "value": "shield", "label": "Quality" },
+            { "value": "whatsapp", "label": "WhatsApp" },
+            { "value": "return", "label": "Returns" },
+            { "value": "check", "label": "Check" }
+          ],
+          "default": "check"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "جودة مضمونة"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "منتجات مختارة بعناية"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Glomarrt: trust bar",
+      "blocks": [
+        { "type": "item", "settings": { "icon": "cash", "title": "الدفع عند الاستلام", "subtitle": "خلّص ملي توصلك السلعة" } },
+        { "type": "item", "settings": { "icon": "truck", "title": "توصيل لجميع المدن", "subtitle": "لباب الدار" } },
+        { "type": "item", "settings": { "icon": "shield", "title": "جودة مضمونة", "subtitle": "منتجات مختارة بعناية" } },
+        { "type": "item", "settings": { "icon": "whatsapp", "title": "دعم عبر واتساب", "subtitle": "كنجاوبوك بسرعة" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

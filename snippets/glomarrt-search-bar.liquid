@@ -1,0 +1,52 @@
+{% comment %}
+  Inline search bar shown in the header on desktop (Glomarrt).
+  Uses Dawn's predictive search when it is enabled in theme settings.
+{% endcomment %}
+<div class="glomarrt-search">
+  {%- if settings.predictive_search_enabled -%}
+    <predictive-search class="glomarrt-search__predictive" data-loading-text="{{ 'accessibility.loading' | t }}">
+  {%- endif -%}
+  <form action="{{ routes.search_url }}" method="get" role="search" class="glomarrt-search__form">
+    <label class="visually-hidden" for="GlomarrtHeaderSearch">{{ 'general.search.search' | t }}</label>
+    <input
+      class="glomarrt-search__input"
+      id="GlomarrtHeaderSearch"
+      type="search"
+      name="q"
+      value="{{ search.terms | escape }}"
+      placeholder="{{ 'glomarrt.search_placeholder' | t }}"
+      {%- if settings.predictive_search_enabled -%}
+        role="combobox"
+        aria-expanded="false"
+        aria-owns="predictive-search-results"
+        aria-controls="predictive-search-results"
+        aria-haspopup="listbox"
+        aria-autocomplete="list"
+        autocorrect="off"
+        autocomplete="off"
+        autocapitalize="off"
+        spellcheck="false"
+      {%- endif -%}
+    >
+    <input name="options[prefix]" type="hidden" value="last">
+    <button
+      type="reset"
+      class="glomarrt-search__reset{% if search.terms == blank %} hidden{% endif %}"
+      aria-label="{{ 'general.search.reset' | t }}"
+    >
+      <span class="svg-wrapper">{{- 'icon-reset.svg' | inline_asset_content -}}</span>
+    </button>
+    <button type="submit" class="glomarrt-search__submit" aria-label="{{ 'general.search.search' | t }}">
+      {%- render 'glomarrt-icon', name: 'search', px: 20 -%}
+    </button>
+    {%- if settings.predictive_search_enabled -%}
+      <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+        {%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
+      </div>
+      <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+    {%- endif -%}
+  </form>
+  {%- if settings.predictive_search_enabled -%}
+    </predictive-search>
+  {%- endif -%}
+</div>

@@ -1,0 +1,61 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "brand": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        },
+        "shop": {
+          "type": "link_list",
+          "settings": {
+            "heading": "تسوق الآن",
+            "menu": "menu-header"
+          }
+        },
+        "about": {
+          "type": "link_list",
+          "settings": {
+            "heading": "تعرف علينا",
+            "menu": "main-menu"
+          }
+        },
+        "contact": {
+          "type": "text",
+          "settings": {
+            "heading": "خدمة العملاء",
+            "subtext": "<p>الهاتف وواتساب: +212 718-138021<br/>الإيميل: contact_us@gmail.com<br/>الدار البيضاء، المغرب</p>"
+          }
+        }
+      },
+      "block_order": [
+        "brand",
+        "shop",
+        "about",
+        "contact"
+      ],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "newsletter_enable": false,
+        "newsletter_heading": "",
+        "enable_follow_on_shop": false,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": true,
+        "payment_enable": false,
+        "show_policy": true,
+        "margin_top": 72,
+        "padding_top": 44,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
