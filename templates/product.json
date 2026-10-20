@@ -38,6 +38,12 @@
             "product": "{{product}}"
           }
         },
+        "webi_leadform_leadform_Pe9RPt": {
+          "type": "shopify://apps/webi-leadform/blocks/leadform/3a127389-69cb-41d6-8e5c-10311613fcf7",
+          "settings": {
+            "leadformcodv3": ""
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -92,6 +98,7 @@
         "variant_picker",
         "quantity_selector",
         "releasit_cod",
+        "webi_leadform_leadform_Pe9RPt",
         "buy_buttons",
         "trust",
         "description",
