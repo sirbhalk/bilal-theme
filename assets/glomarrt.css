@@ -1205,3 +1205,6 @@ body.glomarrt-sticky-buy-open .glomarrt-whatsapp { bottom: 9rem; }
   justify-content: center;
   flex-shrink: 0;
 }
+
+/* Hide the "Taxes included" note (product page and quick view) */
+.product__tax { display: none; }
