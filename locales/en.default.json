@@ -538,17 +538,17 @@
     }
   },
   "glomarrt": {
-    "search_placeholder": "Search for any product…",
-    "whatsapp_label": "Chat with us on WhatsApp",
-    "category": "Category",
-    "home": "Home",
-    "all_collections": "All collections",
-    "breadcrumbs": "Breadcrumbs",
+    "search_placeholder": "قلّب على أي منتج…",
+    "whatsapp_label": "تواصل معنا عبر واتساب",
+    "category": "قسم",
+    "home": "الرئيسية",
+    "all_collections": "جميع الأقسام",
+    "breadcrumbs": "مسار الصفحة",
     "reviews_count": {
-      "one": "{{ count }} review",
-      "other": "{{ count }} reviews"
+      "one": "رأي واحد",
+      "other": "{{ count }} آراء"
     },
-    "you_save_html": "You save {{ amount }} ({{ percent }}%)",
-    "today": "Today"
+    "you_save_html": "وفّر {{ amount }} ({{ percent }}٪)",
+    "today": "اليوم"
   }
 }

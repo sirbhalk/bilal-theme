@@ -62,7 +62,7 @@
       (() => {
         const box = document.currentScript.previousElementSibling;
         if (!box || !box.classList.contains('glomarrt-delivery')) return;
-        const lang = document.documentElement.lang || 'ar';
+        const lang = (document.documentElement.lang || '').startsWith('fr') ? 'fr-MA' : 'ar-MA'; // Arabic unless the page is in French
         const fmt = new Intl.DateTimeFormat(lang, { weekday: 'short', day: 'numeric', month: 'short' });
         const fmtShort = new Intl.DateTimeFormat(lang, { day: 'numeric', month: 'short' });
         const addDays = (n) => {
