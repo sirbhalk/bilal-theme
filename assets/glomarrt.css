@@ -76,6 +76,52 @@
   .glomarrt-topbar__dot { display: none; }
 }
 
+.glomarrt-topbar__marquee { display: none; }
+
+@media screen and (max-width: 749px) {
+  .glomarrt-topbar:has(.glomarrt-topbar__marquee) .glomarrt-topbar__inner {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .glomarrt-topbar__marquee {
+    display: block;
+    overflow: hidden;
+    direction: ltr;
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .glomarrt-topbar__track {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.6rem;
+    padding-inline-end: 1.6rem;
+    animation: glomarrt-marquee var(--marquee-duration, 24s) linear infinite;
+    will-change: transform;
+  }
+
+  .glomarrt-topbar__marquee .glomarrt-topbar__dot { display: inline; }
+
+  .glomarrt-topbar__marquee:active .glomarrt-topbar__track { animation-play-state: paused; }
+}
+
+/* Four copies in the track: shifting by half keeps the loop seamless. Moves left to right for Arabic. */
+@keyframes glomarrt-marquee {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glomarrt-topbar__track { animation: none; }
+}
+
 /* ---------- Header search bar ---------- */
 .glomarrt-search { display: none; }
 

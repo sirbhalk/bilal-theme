@@ -13,6 +13,25 @@
       </span>
     {%- endfor -%}
   </div>
+
+  {%- if section.settings.mobile_marquee and section.blocks.size > 0 -%}
+    <div class="glomarrt-topbar__marquee" style="--marquee-duration: {{ section.settings.marquee_speed }}s;" aria-hidden="true">
+      <div class="glomarrt-topbar__track">
+        {%- for copy in (1..4) -%}
+          {%- for block in section.blocks -%}
+            <span class="glomarrt-topbar__m-item" dir="auto">
+              {%- if block.settings.link != blank -%}
+                <a href="{{ block.settings.link }}" class="glomarrt-topbar__link" tabindex="-1">{{ block.settings.text }}</a>
+              {%- else -%}
+                {{ block.settings.text }}
+              {%- endif -%}
+            </span>
+            <span class="glomarrt-topbar__dot">•</span>
+          {%- endfor -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
 </div>
 
 {% schema %}
@@ -21,6 +40,22 @@
   "class": "glomarrt-topbar-section",
   "max_blocks": 4,
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "mobile_marquee",
+      "label": "Scrolling text on mobile",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "marquee_speed",
+      "label": "Scroll duration (lower is faster)",
+      "min": 10,
+      "max": 60,
+      "step": 2,
+      "unit": "s",
+      "default": 24
+    },
     {
       "type": "color_scheme",
       "id": "color_scheme",
