@@ -1,0 +1,47 @@
+{% doc %}
+  Glomarrt: discourage saving product media and opening dev tools.
+  Deterrent only. Form fields and text links keep working normally.
+{% enddoc %}
+<style>
+  img, video, picture, .media, .product__media, .card__media {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+  }
+</style>
+<script>
+  (() => {
+    const isMedia = (el) => el && el.closest && el.closest('img, video, picture, svg, .media, .product__media, .card__media, .glomarrt-drawer__icon');
+    const isField = (el) => el && el.closest && el.closest('input, textarea, select, [contenteditable="true"]');
+
+    // Long-press (Android) and right-click menu: blocked on media, and on the page outside form fields.
+    document.addEventListener('contextmenu', (e) => {
+      if (!isField(e.target)) e.preventDefault();
+    }, { capture: true });
+
+    document.addEventListener('dragstart', (e) => {
+      if (isMedia(e.target)) e.preventDefault();
+    }, { capture: true });
+
+    const lock = (root) => root.querySelectorAll('img').forEach((img) => img.setAttribute('draggable', 'false'));
+    lock(document);
+    new MutationObserver((list) => list.forEach((m) => m.addedNodes.forEach((n) => n.nodeType === 1 && lock(n.parentNode || n))))
+      .observe(document.documentElement, { childList: true, subtree: true });
+
+    // Inspect / view source / save shortcuts.
+    document.addEventListener('keydown', (e) => {
+      const k = (e.key || '').toLowerCase();
+      const mod = e.ctrlKey || e.metaKey;
+      if (
+        k === 'f12' ||
+        (mod && e.shiftKey && ['i', 'j', 'c', 'k'].includes(k)) ||
+        (e.metaKey && e.altKey && ['i', 'j', 'c', 'u'].includes(k)) ||
+        (mod && ['u', 's'].includes(k))
+      ) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    }, { capture: true });
+  })();
+</script>

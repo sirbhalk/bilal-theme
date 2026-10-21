@@ -412,5 +412,6 @@
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     {% render 'glomarrt-whatsapp' %}
+    {%- if settings.protect_media and request.design_mode == false -%}{% render 'glomarrt-protect' %}{%- endif -%}
   </body>
 </html>

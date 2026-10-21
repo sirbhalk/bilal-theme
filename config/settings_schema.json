@@ -1472,6 +1472,17 @@
     "settings": [
       {
         "type": "header",
+        "content": "Image protection"
+      },
+      {
+        "type": "checkbox",
+        "id": "protect_media",
+        "label": "Block saving images and inspect shortcuts",
+        "info": "Stops long-press and right-click menus, dragging, and shortcuts like F12 and Ctrl+U. A deterrent only: screenshots still work. Off in the theme editor.",
+        "default": true
+      },
+      {
+        "type": "header",
         "content": "Brand"
       },
       {
