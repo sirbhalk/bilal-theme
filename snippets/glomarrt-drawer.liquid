@@ -6,7 +6,6 @@
   the header's main menu links are used instead.
 {% enddoc %}
 {%- liquid
-  assign palette = '#a8eebc,#bfe6fb,#ffef9a,#f9e5c3,#ffc9c9,#ffc7b0,#e4e1dc,#d9fbfb,#e4e683' | split: ','
   assign tile_blocks = section.blocks | where: 'type', 'drawer_category'
   if tile_blocks.size > 0
     assign tile_count = tile_blocks.size
@@ -43,11 +42,7 @@
               assign tile_image = cat.featured_image
               assign tile_image_is_icon = false
             endif
-            assign color_index = forloop.index0 | modulo: palette.size
             assign tile_color = block.settings.color
-            if tile_color == blank
-              assign tile_color = palette[color_index]
-            endif
             assign wide = false
             if forloop.first and odd_count == 1
               assign wide = true
@@ -57,7 +52,7 @@
             <a
               {% if tile_url != blank %}href="{{ tile_url }}"{% else %}role="link" aria-disabled="true"{% endif %}
               class="glomarrt-drawer__tile focus-inset"
-              style="--tile-bg: {{ tile_color }};"
+              {% if tile_color != blank %}style="--tile-bg: {{ tile_color }};"{% endif %}
             >
               <span class="glomarrt-drawer__icon{% unless tile_image_is_icon %} glomarrt-drawer__icon--photo{% endunless %}">
                 {%- if tile_image != blank -%}
@@ -73,7 +68,6 @@
       {%- else -%}
         {%- for link in section.settings.menu.links -%}
           {%- liquid
-            assign color_index = forloop.index0 | modulo: palette.size
             assign tile_image = blank
             if link.type == 'collection_link'
               assign tile_image = link.object.featured_image
@@ -86,7 +80,7 @@
             endif
           -%}
           <li class="glomarrt-drawer__tile-item{% if wide %} glomarrt-drawer__tile-item--wide{% endif %}">
-            <a href="{{ link.url }}" class="glomarrt-drawer__tile focus-inset" style="--tile-bg: {{ palette[color_index] }};">
+            <a href="{{ link.url }}" class="glomarrt-drawer__tile focus-inset">
               <span class="glomarrt-drawer__icon glomarrt-drawer__icon--photo">
                 {%- if tile_image != blank -%}
                   {{ tile_image | image_url: width: 160 | image_tag: loading: 'lazy', alt: '', width: 80, height: 80 }}

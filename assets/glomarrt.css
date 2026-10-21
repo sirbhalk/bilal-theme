@@ -1238,13 +1238,13 @@ body.glomarrt-sticky-buy-open .glomarrt-whatsapp { bottom: 9rem; }
   min-height: 10.4rem;
   padding: 1.2rem;
   border-radius: 0.6rem;
-  background: var(--tile-bg);
-  color: #1d1d1d;
+  background: var(--tile-bg, rgb(var(--glomarrt-brand)));
+  color: #fff;
   text-decoration: none;
   transition: transform 0.15s ease, filter 0.15s ease;
 }
 
-.glomarrt-drawer__tile:hover { filter: brightness(0.97); }
+.glomarrt-drawer__tile:hover { filter: brightness(1.08); }
 .glomarrt-drawer__tile:active { transform: scale(0.98); }
 
 .glomarrt-drawer__icon {
