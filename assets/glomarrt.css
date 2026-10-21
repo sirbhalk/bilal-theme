@@ -1208,3 +1208,115 @@ body.glomarrt-sticky-buy-open .glomarrt-whatsapp { bottom: 9rem; }
 
 /* Hide the "Taxes included" note (product page and quick view) */
 .product__tax { display: none; }
+
+/* ---------- Mobile menu (drawer) ---------- */
+.glomarrt-drawer__hidden-nav { display: none; }
+
+.glomarrt-drawer {
+  padding: 1.6rem 1.6rem 2.4rem;
+}
+
+.glomarrt-drawer__label {
+  margin: 0 0 1.2rem;
+  font-size: 1.5rem;
+  color: rgba(var(--color-foreground), 0.65);
+}
+
+.glomarrt-drawer__tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin: 0 0 2.4rem;
+}
+
+.glomarrt-drawer__tile-item--wide { grid-column: 1 / -1; }
+
+.glomarrt-drawer__tile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 10.4rem;
+  padding: 1.2rem;
+  border-radius: 0.6rem;
+  background: var(--tile-bg);
+  color: #1d1d1d;
+  text-decoration: none;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.glomarrt-drawer__tile:hover { filter: brightness(0.97); }
+.glomarrt-drawer__tile:active { transform: scale(0.98); }
+
+.glomarrt-drawer__icon {
+  flex: 0 0 auto;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.glomarrt-drawer__icon img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.glomarrt-drawer__icon--photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.glomarrt-drawer__icon .placeholder-svg { width: 100%; height: 100%; }
+
+.glomarrt-drawer__tile-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.glomarrt-drawer__tile-item--wide .glomarrt-drawer__tile-title { font-size: 1.7rem; }
+
+.glomarrt-drawer__group { margin-bottom: 2rem; }
+
+.glomarrt-drawer__group-title {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0 0 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.glomarrt-drawer__group-title::before {
+  content: '';
+  width: 0.6rem;
+  height: 0.6rem;
+  background: currentColor;
+}
+
+.glomarrt-drawer__links li + li { margin-top: 0.8rem; }
+
+.glomarrt-drawer__link {
+  display: block;
+  padding: 1.2rem 1.4rem;
+  border-radius: 0.6rem;
+  background: rgba(var(--color-foreground), 0.04);
+  color: rgba(var(--color-foreground), 0.75);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.glomarrt-drawer__link:hover,
+.glomarrt-drawer__link[aria-current='page'] {
+  background: rgba(var(--glomarrt-brand), 0.1);
+  color: rgb(var(--glomarrt-brand));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glomarrt-drawer__tile { transition: none; }
+}
