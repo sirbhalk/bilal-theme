@@ -97,14 +97,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "wa_order": {
-          "type": "glomarrt_whatsapp_order",
-          "settings": {
-            "label": "اطلب عبر واتساب",
-            "message": "السلام عليكم، بغيت نطلب:",
-            "note": "كنجاوبوك بسرعة على واتساب"
-          }
-        },
         "description": {
           "type": "description",
           "settings": {}
@@ -147,7 +139,6 @@
         "releasit_cod",
         "webi_leadform_leadform_Pe9RPt",
         "buy_buttons",
-        "wa_order",
         "description",
         "shipping",
         "guarantee",
