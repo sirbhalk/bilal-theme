@@ -56,6 +56,7 @@
         },
         "delivery": {
           "type": "glomarrt_delivery",
+          "disabled": true,
           "settings": {
             "min_days": 1,
             "max_days": 3,
@@ -67,6 +68,7 @@
         },
         "mini_steps": {
           "type": "glomarrt_mini_steps",
+          "disabled": true,
           "settings": {
             "heading": "كيفاش تطلب؟",
             "step_1": "عمّر الفورم بالاسم والهاتف والمدينة",
