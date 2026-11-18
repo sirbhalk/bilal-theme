@@ -37,6 +37,10 @@
             "product": ""
           }
         },
+        "easysell_cod_form_form_button_block_6em9Ja": {
+          "type": "shopify://apps/easysell-cod-form/blocks/form-button-block/7bfd0a95-6839-4f02-b2ee-896832dbe67e",
+          "settings": {}
+        },
         "savings": {
           "type": "glomarrt_savings",
           "disabled": true,
@@ -138,6 +142,7 @@
         "price",
         "variant_picker",
         "easysell_cod_form_app_block_FA3X4e",
+        "easysell_cod_form_form_button_block_6em9Ja",
         "savings",
         "quantity_selector",
         "trust",
