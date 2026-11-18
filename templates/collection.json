@@ -28,6 +28,7 @@
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 4,
+        "columns_mobile": "2",
         "color_scheme": "scheme-1",
         "image_ratio": "square",
         "image_shape": "default",
@@ -38,18 +39,12 @@
         "enable_filtering": true,
         "filter_type": "horizontal",
         "enable_sorting": true,
-        "columns_mobile": "2",
-        "padding_top": 32,
+        "padding_top": 36,
         "padding_bottom": 0
       }
     },
     "trust": {
       "type": "glomarrt-trust-bar",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "padding_top": 56,
-        "padding_bottom": 56
-      },
       "blocks": {
         "a": {
           "type": "item",
@@ -89,7 +84,12 @@
         "b",
         "c",
         "d"
-      ]
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
     }
   },
   "order": [
