@@ -9,76 +9,9 @@
  */
 {
   "current": {
+    "logo": "shopify://shop_images/Untitled_design_5.png",
     "logo_width": 160,
-    "customer_account_menu": "customer-account-main-menu",
-    "color_schemes": {
-      "scheme-1": {
-        "settings": {
-          "background": "#FFFFFF",
-          "background_gradient": "",
-          "text": "#121212",
-          "button": "#215E61",
-          "button_label": "#FFFFFF",
-          "secondary_button_label": "#215E61",
-          "shadow": "#122829"
-        }
-      },
-      "scheme-2": {
-        "settings": {
-          "background": "#F4F7F7",
-          "background_gradient": "",
-          "text": "#121212",
-          "button": "#215E61",
-          "button_label": "#FFFFFF",
-          "secondary_button_label": "#215E61",
-          "shadow": "#122829"
-        }
-      },
-      "scheme-3": {
-        "settings": {
-          "background": "#215E61",
-          "background_gradient": "",
-          "text": "#FFFFFF",
-          "button": "#FFFFFF",
-          "button_label": "#215E61",
-          "secondary_button_label": "#FFFFFF",
-          "shadow": "#122829"
-        }
-      },
-      "scheme-4": {
-        "settings": {
-          "background": "#163F41",
-          "background_gradient": "",
-          "text": "#E3EDED",
-          "button": "#FFFFFF",
-          "button_label": "#163F41",
-          "secondary_button_label": "#FFFFFF",
-          "shadow": "#122829"
-        }
-      },
-      "scheme-5": {
-        "settings": {
-          "background": "#E4EFEF",
-          "background_gradient": "",
-          "text": "#121212",
-          "button": "#174446",
-          "button_label": "#FFFFFF",
-          "secondary_button_label": "#174446",
-          "shadow": "#122829"
-        }
-      },
-      "scheme-6": {
-        "settings": {
-          "background": "#174446",
-          "background_gradient": "",
-          "text": "#FFFFFF",
-          "button": "#FFFFFF",
-          "button_label": "#174446",
-          "secondary_button_label": "#FFFFFF",
-          "shadow": "#122829"
-        }
-      }
-    },
+    "favicon": "shopify://shop_images/logo_77b094e0-f08d-423d-a555-1e12a7942a7c.png",
     "type_header_font": "assistant_n7",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
@@ -177,14 +110,14 @@
     "brand_headline": "Glomarrt",
     "brand_description": "<p>متجر مغربي فيه كل ما تحتاجه، بالتوصيل لجميع المدن والدفع عند الاستلام.</p>",
     "brand_image_width": 100,
-    "social_twitter_link": "",
     "social_facebook_link": "https://www.facebook.com/profile.php?id=61571386365080",
-    "social_pinterest_link": "",
     "social_instagram_link": "https://www.instagram.com/glomart_oficial",
-    "social_tiktok_link": "",
-    "social_tumblr_link": "",
-    "social_snapchat_link": "",
     "social_youtube_link": "",
+    "social_tiktok_link": "",
+    "social_twitter_link": "",
+    "social_snapchat_link": "",
+    "social_pinterest_link": "",
+    "social_tumblr_link": "",
     "social_vimeo_link": "",
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
@@ -195,6 +128,13 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
+    "customer_account_menu": "customer-account-main-menu",
+    "brand_color": "#215e61",
+    "brand_color_dark": "#174446",
+    "use_cairo_font": true,
+    "show_whatsapp_button": true,
+    "whatsapp_number": "212718138021",
+    "whatsapp_message": "السلام عليكم، بغيت نسول على",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -209,14 +149,82 @@
         }
       }
     },
-    "logo": "shopify://shop_images/Untitled_design_5.png",
-    "favicon": "shopify://shop_images/logo_77b094e0-f08d-423d-a555-1e12a7942a7c.png",
-    "brand_color": "#215e61",
-    "brand_color_dark": "#174446",
-    "use_cairo_font": true,
-    "show_whatsapp_button": true,
-    "whatsapp_number": "212718138021",
-    "whatsapp_message": "السلام عليكم، بغيت نسول على"
+    "content_for_index": [],
+    "blocks": {
+      "17754088914158789468": {
+        "type": "shopify://apps/easysell-cod-form/blocks/app-embed/7bfd0a95-6839-4f02-b2ee-896832dbe67e",
+        "disabled": false,
+        "settings": {}
+      }
+    },
+    "color_schemes": {
+      "scheme-1": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#215e61",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#215e61",
+          "shadow": "#122829"
+        }
+      },
+      "scheme-2": {
+        "settings": {
+          "background": "#f4f7f7",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#215e61",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#215e61",
+          "shadow": "#122829"
+        }
+      },
+      "scheme-3": {
+        "settings": {
+          "background": "#215e61",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#215e61",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#122829"
+        }
+      },
+      "scheme-4": {
+        "settings": {
+          "background": "#163f41",
+          "background_gradient": "",
+          "text": "#e3eded",
+          "button": "#ffffff",
+          "button_label": "#163f41",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#122829"
+        }
+      },
+      "scheme-5": {
+        "settings": {
+          "background": "#e4efef",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#174446",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#174446",
+          "shadow": "#122829"
+        }
+      },
+      "scheme-6": {
+        "settings": {
+          "background": "#174446",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#174446",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#122829"
+        }
+      }
+    }
   },
   "presets": {
     "Dawn": {
