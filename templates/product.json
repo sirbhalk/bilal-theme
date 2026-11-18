@@ -39,6 +39,7 @@
         },
         "easysell_cod_form_form_button_block_6em9Ja": {
           "type": "shopify://apps/easysell-cod-form/blocks/form-button-block/7bfd0a95-6839-4f02-b2ee-896832dbe67e",
+          "disabled": true,
           "settings": {}
         },
         "savings": {
