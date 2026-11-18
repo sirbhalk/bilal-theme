@@ -31,6 +31,12 @@
             "swatch_shape": "circle"
           }
         },
+        "easysell_cod_form_app_block_FA3X4e": {
+          "type": "shopify://apps/easysell-cod-form/blocks/app-block/7bfd0a95-6839-4f02-b2ee-896832dbe67e",
+          "settings": {
+            "product": ""
+          }
+        },
         "savings": {
           "type": "glomarrt_savings",
           "disabled": true,
@@ -131,6 +137,7 @@
         "rating",
         "price",
         "variant_picker",
+        "easysell_cod_form_app_block_FA3X4e",
         "savings",
         "quantity_selector",
         "trust",
