@@ -24,17 +24,17 @@
           "type": "price",
           "settings": {}
         },
-        "savings": {
-          "type": "glomarrt_savings",
-          "disabled": true,
-          "settings": {}
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
             "swatch_shape": "circle"
           }
+        },
+        "savings": {
+          "type": "glomarrt_savings",
+          "disabled": true,
+          "settings": {}
         },
         "quantity_selector": {
           "type": "quantity_selector",
@@ -83,10 +83,10 @@
             "product": "{{product}}"
           }
         },
-        "webi_leadform_leadform_Pe9RPt": {
-          "type": "shopify://apps/webi-leadform/blocks/leadform/3a127389-69cb-41d6-8e5c-10311613fcf7",
+        "easysell_cod_form_app_block_ifE8V7": {
+          "type": "shopify://apps/easysell-cod-form/blocks/app-block/7bfd0a95-6839-4f02-b2ee-896832dbe67e",
           "settings": {
-            "leadformcodv3": ""
+            "product": ""
           }
         },
         "buy_buttons": {
@@ -130,14 +130,14 @@
         "title",
         "rating",
         "price",
-        "savings",
         "variant_picker",
+        "savings",
         "quantity_selector",
         "trust",
         "delivery",
         "mini_steps",
         "releasit_cod",
-        "webi_leadform_leadform_Pe9RPt",
+        "easysell_cod_form_app_block_ifE8V7",
         "buy_buttons",
         "description",
         "shipping",
@@ -253,6 +253,12 @@
         "button_label": "اطلب الآن",
         "show_on_desktop": false
       }
+    },
+    "1795018780b400b41b": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -261,6 +267,7 @@
     "reviews",
     "faq",
     "related-products",
-    "sticky"
+    "sticky",
+    "1795018780b400b41b"
   ]
 }
