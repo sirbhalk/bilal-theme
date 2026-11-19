@@ -31,16 +31,11 @@
             "swatch_shape": "circle"
           }
         },
-        "easysell_cod_form_app_block_FA3X4e": {
-          "type": "shopify://apps/easysell-cod-form/blocks/app-block/7bfd0a95-6839-4f02-b2ee-896832dbe67e",
+        "releasit_cod_form_form_app_block_qNcCeY": {
+          "type": "shopify://apps/releasit-cod-form/blocks/form-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
           "settings": {
-            "product": ""
+            "product": "{{product}}"
           }
-        },
-        "easysell_cod_form_form_button_block_6em9Ja": {
-          "type": "shopify://apps/easysell-cod-form/blocks/form-button-block/7bfd0a95-6839-4f02-b2ee-896832dbe67e",
-          "disabled": true,
-          "settings": {}
         },
         "savings": {
           "type": "glomarrt_savings",
@@ -87,19 +82,6 @@
             "step_3": "خلّص ملي توصلك السلعة"
           }
         },
-        "releasit_cod": {
-          "type": "shopify://apps/releasit-cod-form/blocks/button-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
-          "disabled": true,
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
-        "easysell_cod_form_app_block_ifE8V7": {
-          "type": "shopify://apps/easysell-cod-form/blocks/app-block/7bfd0a95-6839-4f02-b2ee-896832dbe67e",
-          "settings": {
-            "product": ""
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "disabled": true,
@@ -142,15 +124,12 @@
         "rating",
         "price",
         "variant_picker",
-        "easysell_cod_form_app_block_FA3X4e",
-        "easysell_cod_form_form_button_block_6em9Ja",
+        "releasit_cod_form_form_app_block_qNcCeY",
         "savings",
         "quantity_selector",
         "trust",
         "delivery",
         "mini_steps",
-        "releasit_cod",
-        "easysell_cod_form_app_block_ifE8V7",
         "buy_buttons",
         "description",
         "shipping",
