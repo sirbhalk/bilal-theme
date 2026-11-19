@@ -31,8 +31,15 @@
             "swatch_shape": "circle"
           }
         },
+        "easysell_cod_form_app_block_XQeJxT": {
+          "type": "shopify://apps/easysell-cod-form/blocks/app-block/7bfd0a95-6839-4f02-b2ee-896832dbe67e",
+          "settings": {
+            "product": ""
+          }
+        },
         "releasit_cod_form_form_app_block_qNcCeY": {
           "type": "shopify://apps/releasit-cod-form/blocks/form-app-block/72faf214-4174-4fec-886b-0d0e8d3af9a2",
+          "disabled": true,
           "settings": {
             "product": "{{product}}"
           }
@@ -124,6 +131,7 @@
         "rating",
         "price",
         "variant_picker",
+        "easysell_cod_form_app_block_XQeJxT",
         "releasit_cod_form_form_app_block_qNcCeY",
         "savings",
         "quantity_selector",
