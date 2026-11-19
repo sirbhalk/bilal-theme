@@ -583,7 +583,7 @@
   position: fixed;
   bottom: 2rem;
   inset-inline-end: 2rem;
-  z-index: 50;
+  z-index: 999999999999999;
   width: 5.6rem;
   height: 5.6rem;
   border-radius: 50%;
